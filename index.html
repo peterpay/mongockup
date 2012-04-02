@@ -1,0 +1,127 @@
+<html>
+	<head>
+	<meta charset="utf-8">
+    <title>Organize your backups in just seconds</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <style type="text/css">
+      body {
+				background-image:url('img/background.jpg');
+				background-repeat:no-repeat;
+				background-size:100% 100%;
+      }
+      .sidebar-nav {
+        padding: 9px 0;
+      }
+      
+      .left
+      {
+      	background-color:#3a87ad;
+      }
+			
+
+    </style>
+    <link href="css/bootstrap-responsive.css" rel="stylesheet">
+
+    <!--[if lt IE 9]>
+      <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+
+	</head>
+	
+	<body>	
+	<div class="navbar">
+  		<div class="navbar-inner">
+    		<div class="container">
+    			<a class="brand" href="#">
+					Mongockup
+					<img src="img/beta_icon.gif" />
+					</a>									
+		    </div>			
+  		</div>
+	</div>
+	<div class="container-fluid">
+  		<div class="row-fluid">  			
+   			<div class="span3" id="left">   					  		
+                <div class="well">
+       					 <h2>Start</h2>
+			        	 <p>User crendentials:</p>	
+			        	 <div class="controls">
+									<label>Server</label>
+								    <input type="text"  class="input-medium span2" placeholder="localhost" required/>						 	   
+									<label>Username</label>
+								    <input type="text"  class="input-medium span2" placeholder="Username" required/>						 	   
+									<label>Password</label>
+								    <input type="password"  class="input-medium span2" placeholder="Password" required />						 	   
+						 		 </div>
+						 <br/>
+						 <br/>
+
+			        	 <p>
+			        		<a class="btn-primary btn-large disabled" href="#" onclick="credentialsCheck(); return false;">
+			       				  <i class="icon-lock icon-white"></i>
+			     	 				Connect
+					      	</a>
+	 			      	 </p>
+			 		 </div>
+			
+		    </div>
+   			<div class="span8 visible-tablet visible-desktop" id="right">
+			  <div class="hero-unit">
+       			 <h1>Mongockup</h1>
+			        <p>The simplest way to backup and restore your mongodb database(s)</p>
+			        <p><video controls width="100%" height="320px" style="background-color:#d3d3d3"></video>
+        			<p><a class="btn btn-primary btn-large">Help &raquo;</a></p>
+			  </div>
+	   	    </div>
+  		</div>
+	</div>
+	
+	<div class="modal" id="myModal" style="display:none">
+	  <div class="modal-header">
+	    <a class="close" data-dismiss="modal">×</a>
+	    <h3>Connecting to your server</h3>
+	  </div>
+	  <div class="modal-body">
+	    <p>Processing your login</p>
+			<p><img src="img/ajax-loader.gif" /></p>			
+	  </div>
+	  <div class="modal-footer">
+	    <a href="#" class="btn">Cancel</a>
+	  </div>
+	</div>
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+	<script src="js/bootstrap.js"></script>
+	<script src="js/bootstrap-collapse.js"></script>
+	<script src="js/bootstrap-modal.js"></script>
+	<script type="text/javascript">
+	
+	function credentialsCheck()
+	{
+			$('#myModal').modal('show');
+			location.href="manage.html";			
+	}
+	
+		$(document).ready(function()
+		{
+			$(".collapse").collapse({
+				  toggle: false
+			});
+			
+		}
+		);
+		
+		
+		
+	</script>
+	</body>
+</html>
